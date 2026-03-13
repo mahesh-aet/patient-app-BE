@@ -1,6 +1,7 @@
 package com.patient.patient_app.controller;
 
 import com.patient.patient_app.dto.PatientDto;
+import com.patient.patient_app.model.Patient;
 import com.patient.patient_app.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,12 +20,12 @@ public class PatientController {
         return patientService.getAllPatients();
     }
     @PostMapping
-    public PatientDto addPatient(@RequestBody PatientDto patientDto){
+    public Patient addPatient(@RequestBody PatientDto patientDto){
         return patientService.createPatient(patientDto);
     }
-    @PutMapping
-    public PatientDto updatePatient(@RequestBody PatientDto patientDto){
-        return patientService.updatePatient(patientDto);
+    @PutMapping("/{id}")
+    public PatientDto updatePatient(@RequestBody PatientDto patientDto, @PathVariable Integer id){
+        return patientService.updatePatient(patientDto,id);
     }
     @DeleteMapping("/{patientId}")
     public String deletePatient(@PathVariable Integer patientId){

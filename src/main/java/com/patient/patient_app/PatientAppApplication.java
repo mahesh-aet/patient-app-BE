@@ -15,5 +15,4 @@ public class PatientAppApplication {
 	public ModelMapper modelMapper(){
 		return new ModelMapper();
 	}
-
 }
