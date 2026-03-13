@@ -6,11 +6,11 @@
 
  - The API provides CRUD operations for patient records and exposes documented endpoints using OpenAPI.
 ````
-(http://localhost:8080/swagger-ui/index.html)
+http://localhost:8080/swagger-ui/index.html
 ````
 ### How to run
 
- - Clone from the github repo
+ - Clone the project from the github repo
  - navigate to project
  - run the application using this command
 ````
