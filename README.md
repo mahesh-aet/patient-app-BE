@@ -14,7 +14,8 @@
  - navigate to project
  - run the application using this command
 ````
-   mvn spring-boot:run
+   1. mvn clean package
+   2. java -jar target/*.jar
 ````
  - Application will start at
 ````
