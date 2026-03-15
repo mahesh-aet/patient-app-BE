@@ -23,9 +23,9 @@ public class PatientController {
     public Patient addPatient(@RequestBody PatientDto patientDto){
         return patientService.createPatient(patientDto);
     }
-    @PutMapping("/{id}")
-    public PatientDto updatePatient(@RequestBody PatientDto patientDto, @PathVariable Integer id){
-        return patientService.updatePatient(patientDto,id);
+    @PutMapping("/{patientId}")
+    public PatientDto updatePatient(@RequestBody PatientDto patientDto, @PathVariable Integer patientId){
+        return patientService.updatePatient(patientDto,patientId);
     }
     @DeleteMapping("/{patientId}")
     public String deletePatient(@PathVariable Integer patientId){
