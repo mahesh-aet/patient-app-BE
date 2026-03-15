@@ -8,6 +8,12 @@
 ````
 http://localhost:8080/swagger-ui/index.html
 ````
+### Prerequisites
+
+ - Java 17+
+ - PostgreSQL running
+ - Database created: patients_db
+
 ### How to run
 
  - Clone the project from the github repo
