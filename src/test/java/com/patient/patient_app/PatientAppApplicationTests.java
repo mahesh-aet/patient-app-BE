@@ -20,8 +20,8 @@ class PatientAppApplicationTests {
 		PatientDto patientDto = new PatientDto();
 		patientDto.setFirstName("mahesh");
 		patientDto.setLastName("kul");
-//		patientDto.setEmail("tesqt2@gmail.com");
-//		patientDto.setPhoneNumber("3789");
+		patientDto.setEmail("tesqt2@gmail.com");
+		patientDto.setPhoneNumber("3789");
 
 		Patient createdPatient = patientService.createPatient(patientDto);
 		assertNotNull(createdPatient.getId());

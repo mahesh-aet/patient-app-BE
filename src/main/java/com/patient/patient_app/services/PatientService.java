@@ -40,6 +40,18 @@ public class PatientService {
                     "Email already exists"
             );
         }
+        if( patientDto.getEmail() == null){
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Email is required"
+            );
+        }
+        if( patientDto.getPhoneNumber() == null){
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "PhoneNumber is required"
+            );
+        }
         Patient patient = modelMapper.map(patientDto, Patient.class);
         return patientRepo.save(patient);
     }
